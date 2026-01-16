@@ -10,6 +10,7 @@ Expected columns :
 """
 
 from pathlib import Path
+from astropy.table import Table
 
 def load_nsa_catalog(fits_path):
     """
@@ -22,15 +23,21 @@ def load_nsa_catalog(fits_path):
 
     Returns
     -------
-    table 
-        Astropy Table containing NSA data.
+    table: astropy.table.Table
+        NSA catalog table.
     """
-    raise NotImplementedError("NSA FITS loading not implemented yet.")
+    fits_path = Path(fits_path)
+    if not fits_path.exists():
+        raise FileNotFoundError("NSA FITS loading not implemented yet.")
+    table = Table.read(fits_path, format = "fits")
+    return table
 
 def main():
     data_path = Path("data")/ "nsa_catalog.fits"
-    print(f"NSA catalog expected at: {data_path}")
-    print("Data loading logic to be implemented.")
+    print(f"Attempting to load NSA catalog from: {data_path}")
+
+    table = load_nsa_catalog(data_path)
+    print(f"Loaded NSA catalog with {len(table)} rows.")
 
 if __name__ == "__main__":
-    main()
+   main()
