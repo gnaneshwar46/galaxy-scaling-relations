@@ -4,7 +4,7 @@
 This project reproduces and analyzes a well-known galaxy scaling relation using publicly available survey data. The goal is to demonstrate a clean, reproducible astrophysical data-analysis workflow.
 
 ## Scientific Context
-Galaxy scaling relations (e.g. mass-sizw or Tully-Fisher relations) provide insight into galaxy formation and evolution. This project focuses on reproducing a published relation as a first-principles exercise.
+Galaxy scaling relations (e.g. mass-size or Tully-Fisher relations) provide insight into galaxy formation and evolution. This project focuses on reproducing a published relation as a first-principles exercise.
 
 ## Project Structure
 - 'data/' - instructions or scripts to obtain public survey data
