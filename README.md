@@ -1,27 +1,80 @@
-# Reproducible Analysis of Galaxy Scaling Relations
+# Galaxy Scaling Relations from Public Survey Data
 
-## Overview
-This project reproduces and analyzes a well-known galaxy scaling relation using publicly available survey data. The goal is to demonstrate a clean, reproducible astrophysical data-analysis workflow.
+## Abstract
+This project presents a reproducible analysis of galaxy scaling relations using publicly available survey data. 
+The primary focus is on understanding the stellar mass–size relation and investigating the physical origin of scatter in the global relation.
 
-## Scientific Context
-Galaxy scaling relations (e.g. mass-size or Tully-Fisher relations) provide insight into galaxy formation and evolution. This project focuses on reproducing a published relation as a first-principles exercise.
+By separating galaxies based on structural properties (Sérsic index), we demonstrate that galaxy morphology plays a dominant role in organizing scaling behavior.
 
-## Project Structure
-- 'data/' - instructions or scripts to obtain public survey data
-- 'src/' - analysis and plotting code
-- 'figures/' - generated plots and figures
+This work is part of my preparation for PhD research in galaxy evolution and observational astrophysics.
 
-## Status
-Initial setup. Data acquisition and analysis to follow.
+---
 
-## Reproducibility Checkpoint
+## Scientific Motivation
 
-At this stage, the repository contains:
+Scaling relations encode fundamental information about galaxy formation and evolution.
 
-- a fixed scientific goal (stellar mass–size relation)
+The stellar mass–size relation reflects:
 
-- a documented SDSS data acquisition plan
+- Angular momentum acquisition
+- Dissipative vs non-dissipative growth
+- Structural transformation processes
 
-- a runnable analysis entry-point script.
+A single global relation exhibits significant scatter.  
+This project investigates whether structural classification explains that scatter.
 
-Subsequent commits will focus on data ingestion, quality cuts, and reproduction of the published mass–size relation.
+---
+
+## Data
+
+- NASA-Sloan Atlas (NSA)
+- Low-redshift galaxies (z < 0.15)
+- Structural parameters (Sérsic index)
+- Stellar masses and half-light radii
+
+---
+
+## Methodology
+
+1. Data cleaning and redshift sanity checks
+2. Log-space regression analysis
+3. Structural separation:
+   - Disk-dominated galaxies (low Sérsic index)
+   - Bulge-dominated galaxies (high Sérsic index)
+4. Linear fits in log(M*) – log(Re)
+5. Scatter comparison
+
+All steps are reproducible via the provided scripts.
+
+---
+
+## Key Results
+
+- The global mass–size relation shows large intrinsic scatter.
+- When separated by morphology:
+  - Disk galaxies follow a shallow slope.
+  - Bulge-dominated systems follow a steeper relation.
+- Structural classification significantly reduces observed scatter.
+
+This supports the interpretation that galaxy structure is a primary driver of scaling relations.
+
+---
+
+## Reproducibility
+
+To reproduce the analysis:
+
+```bash
+git clone https://github.com/gnaneshwar46/galaxy-scaling-relations
+cd galaxy-scaling-relations
+pip install -r requirements.txt
+python main.py
+
+---
+
+## Author
+
+Gnaneshwar G S  
+Physics Graduate | Aspiring PhD in Astrophysics  
+Research Interests: Galaxy evolution, SMBH–host galaxy co-evolution, observational survey analysis  
+
