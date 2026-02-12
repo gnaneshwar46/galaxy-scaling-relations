@@ -1,5 +1,7 @@
 # Galaxy Scaling Relations from Public Survey Data
 
+This repository represents a structured and reproducible implementation of an earlier exploratory analysis conducted in the NSA catalog (see nsa-analysis repository).
+
 ## Abstract
 This project presents a reproducible analysis of galaxy scaling relations using publicly available survey data. 
 The primary focus is on understanding the stellar mass–size relation and investigating the physical origin of scatter in the global relation.
